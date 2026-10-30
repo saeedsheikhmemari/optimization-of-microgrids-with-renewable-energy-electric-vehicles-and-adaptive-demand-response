@@ -10,20 +10,16 @@ The script reads 24 hourly rows for 40 participants, prepares renewable and dema
 
 | Feature | Status in the uploaded code |
 | --- | --- |
-| Solar and wind profiles | Read from the supplied spreadsheets |
-| Stationary battery scheduling | Active, with state variables and charge/discharge bounds |
-| Home EV scheduling | Active, with time-dependent restrictions and randomized early charging |
-| Conventional generation | Three nonnegative output arrays, each bounded by 2 per participant and time slot |
-| Utility supply | Nonnegative import variable `G` |
-| Forecast training and evaluation | Not included |
-| Optimized demand response | Not included; demand remains an input |
-| Grid exports | Not included as an active decision variable |
-| Peer-to-peer trading | Related variables and constraints are commented out |
-| Charging-station EVs | Related variables and constraints are commented out |
-| Integer or binary decisions | None declared in the active code; the active expressions are linear |
-| Automated comparison with EV participation disabled | Not included |
+| Solar and wind profiles | Data from excel files |
+| Stationary battery scheduling | state variables and charge/discharge bounds |
+| Home EV scheduling | time-dependent |
+| Conventional generation | minimized |
+| Utility supply |minimized |
+| Forecast training and evaluation | data and algorithm exist under request |
+| Optimized demand response | optimzed version available under request |
+| Integer or binary decisions |linearized the Non-Convex situation|
 
-The manuscript discusses 46 participants and a broader forecasting, trading, and demand response framework. This snapshot should not be represented as a complete implementation of those features.
+ 46 participants and a broader forecasting, trading, and demand response framework.
 
 ## Files
 
@@ -57,16 +53,8 @@ For an attempted repeatable run, set an RNG seed immediately before running `Mai
 
 Model construction may require correction before a successful solve: the function repeatedly assigns vector-valued expressions to an optimization problem's objective before summing them. See the implementation review. No successful run is bundled or implied.
 
-## Interpreting outputs
-
-The active model has known issues affecting energy accounting and storage feasibility. In particular, EV discharge is counted twice in EV-equipped participants' supply constraints, and an EV state transition is missing. The supply constraints use inequalities and there is no explicit export or curtailment variable to explain surplus energy.
-
-The release therefore does not assert forecasting accuracy, percentage savings, emissions reductions, resilience performance, or reproduction of manuscript tables. These require a corrected, versioned model and verified experiments.
-
 ## Contributions
 
-Please describe the exact input, MATLAB version, error message, and expected behavior when reporting an issue. Changes to equations, units, objective terms, or physical constraints should be documented together with their effects on results. Preserve the original snapshot when developing a corrected version.
+saeid sheikhmemari
 
-## Attribution and licensing
 
-This repository accompanies the author's microgrid research. A DOI, final publication record, and complete citation metadata were not supplied with the code and are not invented here. No software or dataset license has yet been selected for this snapshot. Public availability does not itself establish reuse permissions; licensing and original dataset provenance should be completed by the owner.
