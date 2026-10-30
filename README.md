@@ -2,7 +2,7 @@
 
 MATLAB research code for daily energy scheduling in a residential microgrid with solar and wind profiles, stationary batteries, home EV batteries, conventional generation, and utility supply.
 
-**Release status: original research snapshot, reviewed statically and not executed in MATLAB.** The supplied files implement part of the manuscript framework. Read the [implementation review](docs/IMPLEMENTATION_REVIEW.md) before interpreting numerical outputs as physical schedules or manuscript reproduction.
+**Release status: original research snapshot, reviewed statically and not executed in MATLAB.** The supplied files implement part of the framework. The full part exist under request
 
 ## Scope of the supplied implementation
 
