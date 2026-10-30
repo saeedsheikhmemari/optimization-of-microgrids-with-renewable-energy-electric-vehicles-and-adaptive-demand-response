@@ -1,3 +1,6 @@
+
+![Uploading 1.png…]()
+
 # Optimization of Microgrids with Renewable Energy, Electric Vehicles, and Adaptive Demand Response
 
 MATLAB research code for daily energy scheduling in a residential microgrid with solar and wind profiles, stationary batteries, home EV batteries, conventional generation, and utility supply.
