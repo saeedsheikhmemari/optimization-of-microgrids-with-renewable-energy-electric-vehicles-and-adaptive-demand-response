@@ -45,13 +45,11 @@ The source MATLAB release was not specified in the uploaded files. No release co
 
 ## Running the supplied snapshot
 
-Keep the two MATLAB files and all three workbooks in the same folder, and make that folder MATLAB's current folder. The workbook filenames are referenced without their `.xlsx` suffixes in the supplied script.
+Keep the two MATLAB files and all three workbooks in the same folder, and make that folder MATLAB's current folder.
 
-Run `Main` from the MATLAB Editor or Command Window. The script clears the workspace and closes existing figures before importing data. Outputs include the `linsol` solution structure, `fval`, participant-level arrays, printed totals, and figures. The script does not automatically export results to files.
+Run `Main` from the MATLAB Editor or Command Window.
 
-For an attempted repeatable run, set an RNG seed immediately before running `Main`. The script uses `unifrnd` to fix early-hour EV charging values and contains no seed of its own. Record the seed, MATLAB release, toolbox versions, solver diagnostics, and any source changes with each experiment.
 
-Model construction may require correction before a successful solve: the function repeatedly assigns vector-valued expressions to an optimization problem's objective before summing them. See the implementation review. No successful run is bundled or implied.
 
 ## Contributions
 
